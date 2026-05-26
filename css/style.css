@@ -15,6 +15,7 @@ body {
   margin: 2%;
   padding-bottom: 2rem;
   border-bottom: 1px solid #a0a0a096;
+  margin-bottom: 3rem;
 }
 
 .header-petname-container {
@@ -50,20 +51,92 @@ body {
   line-height: 0;
 }
 
+.intro {
+  padding: 2% 0;
+  text-align: center;
+  /* box-shadow: 0px -10px 50px 0px rgba(0, 0, 0, 0.055); */
+}
+
+.intro-happy-birthay {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.intro-happy-birthay-countdownl {
+  opacity: 0.5;
+  filter: blur(7px);
+}
+
+.intro-cards {
+  display: grid;
+  margin: 0 35%;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.intro-age-card-no {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.intro-age-card-text {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+}
+
 @media (max-width: 768px) {
   .header-container {
     margin: 5%;
     padding-bottom: 1rem;
     border-bottom: 1px solid #a0a0a08e;
+    margin-bottom: 2rem;
   }
 
   .header-name {
-    font-size: 2.3rem;
+    font-size: 1.5rem;
   }
 
   .header-petname {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     font-weight: 500;
     letter-spacing: 0.21rem;
+  }
+
+  .intro {
+    box-shadow: 0px -10px 50px 0px rgba(0, 0, 0, 0.055);
+  }
+
+  .intro-happy-birthay {
+    font-size: 2.5rem;
+    font-weight: 900;
+  }
+
+  .intro-cards {
+    margin: 0;
+  }
+
+  .intro-age-card {
+    margin: auto;
+    padding-bottom: 10%;
+    width: 85%;
+    border: 1px solid #a0a0a031;
+  }
+
+  .intro-age-card-no {
+    font-size: 2rem;
+  }
+
+  .intro-age-card-text {
+    font-size: 0.65rem;
   }
 }
