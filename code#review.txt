@@ -1,0 +1,20 @@
+Act as a senior software engineer and a patient mentor. I want feedback on the specific code below and to improve this specific code if necessary. Preserve the original functionality unless a change is clearly necessary.
+Do not over-engineer the solution. Explain tradeoffs when relevant.
+If something is already good, say so instead of changing it unnecessarily.
+Prefer practical real-world improvements over purely theoretical optimizations
+
+Please review the snippet below for three things:
+1. Efficiency & Performance: Is there a faster, less resource-heavy way to execute this logic?
+2. Modern Best Practices: Am I using old patterns? Are there cleaner, modern language features (like newer CSS layout methods or JS array methods) I should use instead?
+3. Readability: How can I make this code cleaner so another developer can understand it instantly?
+4. Prefer simplicity over cleverness.
+5. Code Quality: Identify potential bugs, edge cases, security concerns, or hidden issues. Mention anything that could become problematic at scale.
+
+Please provide the optimized code first, and then give me a brief "Why This Is Better" breakdown of the changes so I can learn from them.
+
+Response format:
+
+Key improvements (bullet points)
+Improved version of the code
+Brief explanation of why each change is better
+Optional: additional advanced improvements I can learn later

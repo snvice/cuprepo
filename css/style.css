@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #fbf9f4;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+}
+
+.header-container {
+  margin: 2%;
+}
+
+.header-petname-container {
+  display: flex;
+  gap: 0rem;
+}
+
+.header-name {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-size: 3rem;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 0.1rem;
+  text-shadow: -2px 2px 6px;
+  margin-bottom: 1rem;
+}
+
+.header-petname {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.321rem;
+  text-transform: uppercase;
+}
+
+.header-petname:first-child::after {
+  content: "\00b7";
+  margin: 0 0.43rem;
+  font-size: 1.5rem;
+  vertical-align: middle;
+  line-height: 0;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    margin: 5%;
+  }
+
+  .header-name {
+    font-size: 2rem;
+  }
+
+  .header-petname {
+    font-size: 0.76rem;
+    font-weight: 500;
+    letter-spacing: 0.21rem;
+  }
+}
