@@ -11,30 +11,30 @@ body {
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
 }
 
-.header-container {
+.site-header {
   margin: 2%;
   padding-bottom: 2rem;
   border-bottom: 1px solid #a0a0a096;
   margin-bottom: 3rem;
 }
 
-.header-petname-container {
+.site-header__meta {
   display: flex;
   align-items: center;
 }
 
-.header-name {
+.site-header__name {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-size: 3rem;
   font-weight: 700;
   font-style: italic;
   letter-spacing: 0.1rem;
-  text-shadow: -1px 2px 2px;
+  text-shadow: -1px 1px 2px;
   margin-bottom: 1rem;
 }
 
-.header-petname {
+.site-header__meta-item {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-size: 0.7rem;
@@ -43,7 +43,7 @@ body {
   text-transform: uppercase;
 }
 
-.header-petname + .header-petname::before {
+.site-header__meta-item + .site-header__meta-item::before {
   content: "\00b7";
   margin: 0 0.43rem;
   font-size: 1.5rem;
@@ -51,13 +51,13 @@ body {
   line-height: 0;
 }
 
-.intro {
+.birthday-hero {
   padding: 2% 0;
   text-align: center;
   /* box-shadow: 0px -10px 50px 0px rgba(0, 0, 0, 0.055); */
 }
 
-.intro-happy-birthay {
+.birthday-hero__title {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-size: 5rem;
@@ -65,18 +65,18 @@ body {
   margin-bottom: 3rem;
 }
 
-.intro-happy-birthay-countdownl {
+.birthday-hero__title-accentx {
   opacity: 0.5;
   filter: blur(7px);
 }
 
-.intro-cards {
+.age-stats {
   display: grid;
   margin: 0 35%;
   grid-template-columns: repeat(3, 1fr);
 }
 
-.intro-age-card-no {
+.age-stats__value {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-size: 3rem;
@@ -85,7 +85,7 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.intro-age-card-text {
+.age-stats__label {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-size: 0.72rem;
@@ -95,48 +95,48 @@ body {
 }
 
 @media (max-width: 768px) {
-  .header-container {
+  .site-header {
     margin: 5%;
     padding-bottom: 1rem;
     border-bottom: 1px solid #a0a0a08e;
     margin-bottom: 2rem;
   }
 
-  .header-name {
+  .site-header__name {
     font-size: 1.5rem;
   }
 
-  .header-petname {
+  .site-header__meta-item {
     font-size: 0.6rem;
     font-weight: 500;
     letter-spacing: 0.21rem;
   }
 
-  .intro {
+  .birthday-hero {
     box-shadow: 0px -10px 50px 0px rgba(0, 0, 0, 0.055);
   }
 
-  .intro-happy-birthay {
+  .birthday-hero__title {
     font-size: 2.5rem;
     font-weight: 900;
   }
 
-  .intro-cards {
+  .age-stats {
     margin: 0;
   }
 
-  .intro-age-card {
+  .age-stats__card {
     margin: auto;
     padding-bottom: 10%;
     width: 85%;
     border: 1px solid #a0a0a031;
   }
 
-  .intro-age-card-no {
+  .age-stats__value {
     font-size: 2rem;
   }
 
-  .intro-age-card-text {
+  .age-stats__label {
     font-size: 0.65rem;
   }
 }
