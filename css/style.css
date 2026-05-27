@@ -12,10 +12,9 @@ body {
 }
 
 .site-header {
-  margin: 2%;
+  margin: 2% 3% 1%;
   padding-bottom: 2rem;
   border-bottom: 1px solid #a0a0a096;
-  margin-bottom: 3rem;
 }
 
 .site-header__meta {
@@ -52,17 +51,15 @@ body {
 }
 
 .birthday-hero {
-  padding: 2% 0;
   text-align: center;
-  /* box-shadow: 0px -10px 50px 0px rgba(0, 0, 0, 0.055); */
 }
 
 .birthday-hero__title {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 700;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .birthday-hero__title-accentx {
@@ -72,7 +69,8 @@ body {
 
 .age-stats {
   display: grid;
-  margin: 0 35%;
+  max-width: 30%;
+  margin: 0 auto;
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -99,7 +97,6 @@ body {
     margin: 5%;
     padding-bottom: 1rem;
     border-bottom: 1px solid #a0a0a08e;
-    margin-bottom: 2rem;
   }
 
   .site-header__name {
@@ -122,12 +119,12 @@ body {
   }
 
   .age-stats {
-    margin: 0;
+    max-width: 100%;
   }
 
   .age-stats__card {
     margin: auto;
-    padding-bottom: 10%;
+    padding-bottom: 1rem;
     width: 85%;
     border: 1px solid #a0a0a031;
   }
@@ -138,5 +135,11 @@ body {
 
   .age-stats__label {
     font-size: 0.65rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1124px) {
+  .age-stats {
+    max-width: 50%;
   }
 }
