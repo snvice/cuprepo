@@ -7,14 +7,17 @@
 }
 
 body {
-  background-color: #fbf9f4;
+  /* background-color: #fbf9f4; */
+  /* background-color: #fff; */
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
 }
 
 .site-header {
-  margin: 2% 3% 1%;
+  margin: 2% 3% 0;
   padding-bottom: 2rem;
   border-bottom: 1px solid #a0a0a096;
+  border-radius: 15px;
+  margin-bottom: 2%;
 }
 
 .site-header__meta {
@@ -50,28 +53,46 @@ body {
   line-height: 0;
 }
 
-.birthday-hero {
-  text-align: center;
+.chapter-text {
+  padding: 0 5%;
+  font-optical-sizing: auto;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 5px;
+  margin-bottom: 1%;
+  /* border: 1px solid #0dee0596; */
+}
+
+.birthday-hero-grid {
+  padding: 0 15%;
+  display: flex;
+}
+
+.birthday-hero-grid > * {
+  flex: 1;
+  margin-bottom: 5%;
+  /* border: 1px solid #0dee0596; */
 }
 
 .birthday-hero__title {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
-  font-size: 4rem;
+  font-size: 4.5rem;
   font-weight: 700;
-  margin-bottom: 2rem;
-}
-
-.birthday-hero__title-accentx {
-  opacity: 0.5;
-  filter: blur(7px);
+  margin-bottom: 1rem;
+  letter-spacing: 0.2rem;
 }
 
 .age-stats {
-  display: grid;
-  max-width: 30%;
-  margin: 0 auto;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.age-stats__card {
+  text-align: center;
 }
 
 .age-stats__value {
@@ -90,11 +111,57 @@ body {
   font-weight: 500;
   letter-spacing: 0.4rem;
   text-transform: uppercase;
+  margin-bottom: 7%;
+}
+
+.age-stats__label__statement {
+  text-shadow: 0px 0px 3px;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 5%;
+  padding: 5% 5% 8%;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  border: 1px solid #a0a0a08e;
+  transform: rotate(2deg);
+  box-shadow: 0px 0px 17px -4px #00000059;
+}
+
+.profile {
+  border: 3px solid #fff;
+  max-width: 100%;
+  transform: rotate(3deg);
+  box-shadow: 0px 0px 76px -6px #00000059;
+  margin-bottom: 5%;
+}
+
+.birthday-date__text {
+  margin: 0 auto;
+  text-align: center;
+  padding: 2% 5%;
+  width: max-content;
+  background: #fff;
+  border-radius: 15px;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-size: 0.8rem;
+  font-style: italic;
+  font-weight: 100;
+  letter-spacing: 0.1rem;
+  transform: rotate(2deg);
+  text-shadow: 0px 0px 1px;
+}
+
+.footer {
+  margin-top: 3rem;
 }
 
 @media (max-width: 768px) {
   .site-header {
-    margin: 5%;
+    margin: 5% 5% 10%;
     padding-bottom: 1rem;
     border-bottom: 1px solid #a0a0a08e;
   }
@@ -104,42 +171,89 @@ body {
   }
 
   .site-header__meta-item {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     font-weight: 500;
     letter-spacing: 0.21rem;
   }
 
+  .chapter-text {
+    letter-spacing: 0.21rem;
+    font-size: 0.65rem;
+    text-shadow: 0px 0px 4px;
+    margin-bottom: 3%;
+  }
+
+  .birthday-hero-grid {
+    padding: 0 5%;
+    flex-direction: column;
+    /* border: 1px solid #0dee0596; */
+  }
+
   .birthday-hero {
-    box-shadow: 0px -10px 50px 0px rgba(0, 0, 0, 0.055);
+    margin-bottom: 6%;
   }
 
   .birthday-hero__title {
-    font-size: 2.5rem;
+    text-align: left;
+    font-size: 3rem;
+    margin-bottom: 0;
     font-weight: 900;
   }
 
   .age-stats {
-    max-width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .age-stats__card {
-    margin: auto;
-    padding-bottom: 1rem;
-    width: 85%;
-    border: 1px solid #a0a0a031;
+    text-align: left;
+    padding: 1% 5%;
+    width: 100%;
+    margin-bottom: 5%;
+    box-shadow: 0px 0px 17px -4px #00000059;
+    border: 1px solid #a0a0a080;
   }
 
   .age-stats__value {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .age-stats__label {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.3rem;
+    margin-bottom: 4%;
+  }
+
+  .age-stats__label__statement {
+    text-shadow: 0px 0px 2px;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1124px) {
-  .age-stats {
-    max-width: 50%;
+  .chapter-text {
+    font-size: 0.65rem;
+    text-shadow: 0px 0px 2px;
+  }
+
+  .birthday-hero-grid {
+    padding: 0 4%;
+    display: flex;
+  }
+
+  .birthday-hero__title {
+    font-size: 3.5rem;
+    margin-bottom: 0rem;
+  }
+
+  .age-stats__value {
+    font-size: 3rem;
+  }
+
+  .age-stats__label {
+    font-size: 0.7rem;
+  }
+
+  .age-stats__label__statement {
+    text-shadow: 0px 0px 2px;
   }
 }
