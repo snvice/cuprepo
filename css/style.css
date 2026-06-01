@@ -118,41 +118,77 @@ body {
   text-shadow: 0px 0px 3px;
 }
 
-.image-container {
+.birthday-profile {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 5%;
-  padding: 5% 5% 8%;
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
-  border: 1px solid #a0a0a08e;
-  transform: rotate(2deg);
-  box-shadow: 0px 0px 17px -4px #00000059;
+  /* flex-direction: column; */
+  margin: 0 9%;
+  /* padding: 2%; */
+  /* background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png"); */
+  /* border: 1px solid #a0a0a08e; */
+  /* transform: rotate(2deg); */
+  /* box-shadow: 0px 0px 17px -4px #00000059; */
+  /* margin-bottom: 3rem; */
+  /* border: 1px solid #a0a0a08e; */
 }
 
-.profile {
+.birthday-profile > * {
+  flex: 1;
+}
+
+.birthday-profile__media-group {
+  text-align: center;
+  padding: 1%;
+  position: relative;
+}
+
+.birthday-profile__avatar {
+  padding: 2% 2% 7%;
   border: 3px solid #fff;
-  max-width: 100%;
+  max-width: 50%;
   transform: rotate(3deg);
   box-shadow: 0px 0px 76px -6px #00000059;
-  margin-bottom: 5%;
+  margin-bottom: 1%;
+  outline: 1px solid #a0a0a05e;
+  outline-offset: 25px;
 }
 
-.birthday-date__text {
+.birthday-profile__date {
   margin: 0 auto;
   text-align: center;
-  padding: 2% 5%;
+  /* padding: 2% 5%; */
   width: max-content;
-  background: #fff;
-  border-radius: 15px;
+  /* background: #fff; */
+  /* border-radius: 15px; */
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1rem;
+  /* font-style: italic; */
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  transform: rotate(3deg);
+  /* text-shadow: 0px 0px 1px; */
+  position: absolute;
+  top: 89%;
+  left: 35%;
+}
+
+.birthday-profile__text-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid #0dee0596; */
+}
+
+.birthday-profile__quote {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
-  font-size: 0.8rem;
   font-style: italic;
-  font-weight: 100;
+  font-size: 2.5rem;
+  font-weight: 300;
   letter-spacing: 0.1rem;
-  transform: rotate(2deg);
-  text-shadow: 0px 0px 1px;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 1px;
+  color: #8e443d;
 }
 
 .footer {
@@ -227,6 +263,44 @@ body {
   .age-stats__label__statement {
     text-shadow: 0px 0px 2px;
   }
+
+  .birthday-profile {
+    margin: 0 1%;
+    flex-direction: column;
+  }
+
+  .birthday-profile__media-group {
+    margin: 0 8% 7%;
+    padding: 2%;
+    position: relative;
+  }
+
+  .birthday-profile__media-group::after {
+    content: "";
+    position: absolute;
+    border: 1px solid #a0a0a042;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -20px;
+    transform: rotate(3deg);
+    box-shadow: 0px 0px 56px -5px #00000059;
+  }
+
+  .birthday-profile__avatar {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .birthday-profile__date {
+    margin-top: 3%;
+    text-align: center;
+    font-size: 0.9rem;
+    position: relative;
+
+    top: 0;
+    left: 0;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1124px) {
@@ -255,5 +329,17 @@ body {
 
   .age-stats__label__statement {
     text-shadow: 0px 0px 2px;
+  }
+
+  .birthday-profile__avatar {
+    padding: 2% 2% 10%;
+    max-width: 65%;
+  }
+
+  .birthday-profile__date {
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+    top: 88%;
+    left: 25%;
   }
 }
