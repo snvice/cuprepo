@@ -477,7 +477,7 @@ body {
     transform-origin: 0 0;
     text-wrap: nowrap;
 
-    $items: 20;
+    $items: 15;
     $angle: 360 / $items;
 
     &:last-child {

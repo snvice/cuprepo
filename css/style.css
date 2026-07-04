@@ -537,63 +537,48 @@ body {
     color: red;
   }
   .mobile__text-group li:nth-child(1) {
-    rotate: calc(18deg);
+    rotate: calc(24deg);
   }
   .mobile__text-group li:nth-child(2) {
-    rotate: calc(36deg);
+    rotate: calc(48deg);
   }
   .mobile__text-group li:nth-child(3) {
-    rotate: calc(54deg);
-  }
-  .mobile__text-group li:nth-child(4) {
     rotate: calc(72deg);
   }
+  .mobile__text-group li:nth-child(4) {
+    rotate: calc(96deg);
+  }
   .mobile__text-group li:nth-child(5) {
-    rotate: calc(90deg);
+    rotate: calc(120deg);
   }
   .mobile__text-group li:nth-child(6) {
-    rotate: calc(108deg);
-  }
-  .mobile__text-group li:nth-child(7) {
-    rotate: calc(126deg);
-  }
-  .mobile__text-group li:nth-child(8) {
     rotate: calc(144deg);
   }
+  .mobile__text-group li:nth-child(7) {
+    rotate: calc(168deg);
+  }
+  .mobile__text-group li:nth-child(8) {
+    rotate: calc(192deg);
+  }
   .mobile__text-group li:nth-child(9) {
-    rotate: calc(162deg);
-  }
-  .mobile__text-group li:nth-child(10) {
-    rotate: calc(180deg);
-  }
-  .mobile__text-group li:nth-child(11) {
-    rotate: calc(198deg);
-  }
-  .mobile__text-group li:nth-child(12) {
     rotate: calc(216deg);
   }
-  .mobile__text-group li:nth-child(13) {
-    rotate: calc(234deg);
+  .mobile__text-group li:nth-child(10) {
+    rotate: calc(240deg);
   }
-  .mobile__text-group li:nth-child(14) {
-    rotate: calc(252deg);
+  .mobile__text-group li:nth-child(11) {
+    rotate: calc(264deg);
   }
-  .mobile__text-group li:nth-child(15) {
-    rotate: calc(270deg);
-  }
-  .mobile__text-group li:nth-child(16) {
+  .mobile__text-group li:nth-child(12) {
     rotate: calc(288deg);
   }
-  .mobile__text-group li:nth-child(17) {
-    rotate: calc(306deg);
+  .mobile__text-group li:nth-child(13) {
+    rotate: calc(312deg);
   }
-  .mobile__text-group li:nth-child(18) {
-    rotate: calc(324deg);
+  .mobile__text-group li:nth-child(14) {
+    rotate: calc(336deg);
   }
-  .mobile__text-group li:nth-child(19) {
-    rotate: calc(342deg);
-  }
-  .mobile__text-group li:nth-child(20) {
+  .mobile__text-group li:nth-child(15) {
     rotate: calc(360deg);
   }
   .mobile__text-group li span {
