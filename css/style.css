@@ -1,3 +1,5 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Satisfy&family=Special+Elite&display=swap");
 *,
 *::before,
 *::after {
@@ -13,7 +15,7 @@ body {
 .site-header {
   margin: 2% 3% 2%;
   padding-bottom: 2rem;
-  border-bottom: 1px solid #a0a0a096;
+  border-bottom: 1px solid rgba(160, 160, 160, 0.5882352941);
   border-radius: 15px;
 }
 
@@ -41,11 +43,118 @@ body {
 }
 
 .site-header__meta-item + .site-header__meta-item::before {
-  content: "\00b7";
+  content: "·";
   margin: 0 0.43rem;
   font-size: 1.5rem;
   vertical-align: middle;
   line-height: 0;
+}
+
+.sidebar--container {
+  top: 15%;
+  right: 0;
+  background: #ffffff;
+  height: 220px;
+  width: 90px;
+  box-shadow: 2px 2px 15px rgba(51, 51, 51, 0.1);
+  border: 1px solid #e949a1;
+}
+
+.sticky {
+  position: fixed;
+  z-index: 10;
+}
+
+.sidebar--container--title {
+  margin-left: 27px;
+  margin-top: 35px;
+}
+.sidebar--container--title h4 {
+  writing-mode: vertical-rl;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+.sidebar--container--icon {
+  margin-top: 20px;
+  margin-left: 49px;
+  font-size: 1em;
+}
+.sidebar--container--icon:hover {
+  color: #e949a1;
+  cursor: pointer;
+}
+
+.sidebar--open {
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100vh;
+  height: 100dvh;
+  width: 40vw;
+  background: #ffffff;
+  transition: all 0.4s ease-out;
+  opacity: 1;
+  box-shadow: 2px 2px 15px rgba(51, 51, 51, 0.1);
+}
+
+.close {
+  transform: translateX(-300px);
+  transition: all 0.4s ease-out;
+  opacity: 0;
+}
+
+.sidebar--open-icon {
+  text-align: right;
+  padding: 20px;
+}
+.sidebar--open-icon i {
+  font-size: 1.8em;
+  color: #e949a1;
+}
+.sidebar--open-icon i:hover {
+  color: #333333;
+  cursor: pointer;
+}
+
+.sidebar--open--blockquote {
+  max-width: 640px;
+  margin: 0 auto 5%;
+  border: 0.4px solid rgba(233, 73, 161, 0.231372549);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.sidebar--open--blockquote h1::before {
+  content: "♥";
+  display: block;
+  text-align: center;
+  color: #e949a1;
+  font-family: sans-serif;
+  font-size: 1.4rem;
+  line-height: 1;
+  margin-bottom: 0.6rem;
+  letter-spacing: 0;
+}
+
+.sidebar--open--blockquote h1 {
+  font-family: "Satisfy", sans-serif;
+  font-size: 1.1rem;
+  font-weight: normal;
+  letter-spacing: 0.1rem;
+  padding: 1% 5% 5%;
+  margin-bottom: 0;
+}
+
+.sidebar--open--blockquote h4 {
+  font-family: "Special Elite", sans-serif;
+  font-weight: normal;
+  font-size: 0.8rem;
+  margin-left: 40%;
+  margin-top: 0;
 }
 
 .chapter-text {
@@ -127,15 +236,16 @@ body {
   border: 3px solid #fff;
   max-width: 50%;
   transform: rotate(3deg);
-  box-shadow: 0px 0px 76px -6px #00000059;
+  box-shadow: 0px 0px 76px -6px rgba(0, 0, 0, 0.3490196078);
   margin-bottom: 1%;
-  outline: 1px solid #a0a0a05e;
+  outline: 1px solid rgba(160, 160, 160, 0.368627451);
   outline-offset: 25px;
 }
 
 .birthday-profile__date {
   margin: 0 auto;
   text-align: center;
+  width: -moz-max-content;
   width: max-content;
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
@@ -168,100 +278,91 @@ body {
   .site-header {
     margin: 5% 5% 10%;
     padding-bottom: 1rem;
-    border-bottom: 1px solid #a0a0a08e;
+    border-bottom: 1px solid rgba(160, 160, 160, 0.5568627451);
   }
-
   .site-header__name {
     font-size: 1.5rem;
   }
-
   .site-header__meta-item {
     font-size: 0.7rem;
     font-weight: 500;
     letter-spacing: 0.21rem;
   }
-
+  .sidebar--open {
+    width: 75vw;
+  }
+  .sidebar--open--blockquote {
+    margin: 0 5% 10%;
+    border: 1px solid rgba(233, 73, 161, 0.231372549);
+  }
   .chapter-text {
     letter-spacing: 0.21rem;
     font-size: 0.65rem;
     text-shadow: 0px 0px 4px;
     margin-bottom: 3%;
   }
-
   .birthday-hero-grid {
     padding: 0 5%;
     flex-direction: column;
     margin-bottom: 3%;
   }
-
   .birthday-hero {
     margin-bottom: 6%;
   }
-
   .birthday-hero__title {
     text-align: left;
     font-size: 3rem;
     margin-bottom: 0;
     font-weight: 900;
   }
-
   .age-stats {
     flex-direction: column;
     align-items: flex-start;
   }
-
   .age-stats__card {
     text-align: left;
     padding: 1% 5%;
     width: 100%;
     margin-bottom: 5%;
-    box-shadow: 0px 0px 17px -4px #00000059;
-    border: 1px solid #a0a0a080;
+    box-shadow: 0px 0px 17px -4px rgba(0, 0, 0, 0.3490196078);
+    border: 1px solid rgba(160, 160, 160, 0.5019607843);
   }
-
   .age-stats__value {
     font-size: 2.5rem;
   }
-
   .age-stats__label {
     font-size: 0.7rem;
     letter-spacing: 0.3rem;
     margin-bottom: 4%;
   }
-
   .age-stats__label__statement {
     text-shadow: 0px 0px 2px;
   }
-
   .birthday-profile {
     margin: 0 1%;
     flex-direction: column;
   }
-
   .birthday-profile__media-group {
     margin: 0 8% 7%;
     padding: 2%;
     position: relative;
   }
-
   .birthday-profile__media-group::after {
     content: "";
     position: absolute;
-    border: 1px solid #a0a0a042;
+    border: 1px solid rgba(160, 160, 160, 0.2588235294);
     top: -8px;
     left: -8px;
     right: -8px;
     bottom: -20px;
     transform: rotate(3deg);
-    box-shadow: 0px 0px 56px -5px #00000059;
+    box-shadow: 0px 0px 56px -5px rgba(0, 0, 0, 0.3490196078);
   }
-
   .birthday-profile__avatar {
     padding: 0;
     max-width: 100%;
     outline: none;
   }
-
   .birthday-profile__date {
     margin-top: 3%;
     text-align: center;
@@ -270,17 +371,14 @@ body {
     top: 0;
     left: 0;
   }
-
   .birthday-profile__text-group {
     text-align: center;
     margin: 10% 2% 0;
   }
-
   .birthday-profile__quote {
     font-size: 1.5rem;
     font-weight: 200;
   }
-
   .birthday-profile__quote::before {
     content: "\f004   \f004   \f004";
     font-family: "Font Awesome 7 Free";
@@ -291,46 +389,37 @@ body {
     text-align: center;
     margin-bottom: 7%;
   }
-
 }
-
 @media (min-width: 769px) and (max-width: 1124px) {
   .chapter-text {
     font-size: 0.65rem;
     text-shadow: 0px 0px 2px;
   }
-
   .birthday-hero-grid {
     padding: 0 4%;
     display: flex;
   }
-
   .birthday-hero__title {
     font-size: 3.5rem;
     margin-bottom: 0;
   }
-
   .age-stats__value {
     font-size: 3rem;
   }
-
   .age-stats__label {
     font-size: 0.7rem;
   }
-
   .age-stats__label__statement {
     text-shadow: 0px 0px 2px;
   }
-
   .birthday-profile__avatar {
     padding: 2% 2% 10%;
     max-width: 65%;
   }
-
   .birthday-profile__date {
     font-size: 0.8rem;
     letter-spacing: 0.1rem;
     top: 88%;
     left: 25%;
   }
-}
+}/*# sourceMappingURL=style.css.map */
