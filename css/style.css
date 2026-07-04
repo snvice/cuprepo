@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Satisfy&family=Special+Elite&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
 *,
 *::before,
 *::after {
@@ -267,6 +268,8 @@ body {
 
 .birthday-profile__text-group {
   font-family: "Montserrat";
+  letter-spacing: 0.1rem;
+  text-shadow: -2px 0.5px 15px;
 }
 
 .birthday-profile__text-group ul {
@@ -281,8 +284,10 @@ body {
   transform-origin: 0 0;
   text-wrap: nowrap;
 }
-.birthday-profile__text-group li:last-child {
-  color: red;
+.birthday-profile__text-group li:nth-child(n+4) {
+  opacity: 60%;
+  font-style: italic;
+  text-shadow: -2px 0.5px 10px rgb(238, 117, 137);
 }
 .birthday-profile__text-group li:nth-child(1) {
   rotate: calc(18deg);
@@ -519,8 +524,21 @@ body {
     display: block;
     min-height: 35vh;
     position: relative;
-    font-family: "Montserrat";
+    font-family: "Jost", sans-serif;
+    font-size: 1.1rem;
+    font-weight: normal;
+    letter-spacing: 0.1rem;
+    text-shadow: -2px 0.5px 15px;
     margin-bottom: 25%;
+  }
+  .mobile__text-group-break {
+    margin-top: 5%;
+    height: 1px;
+    width: 30%;
+    background: linear-gradient(to right, transparent, rgba(43, 30, 226, 0.7882352941) 20%, rgba(226, 30, 161, 0.7882352941) 80%, transparent);
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
   }
   .mobile__text-group ul {
     list-style: none;
@@ -533,52 +551,45 @@ body {
     transform-origin: 0 0;
     text-wrap: nowrap;
   }
-  .mobile__text-group li:last-child {
-    color: red;
+  .mobile__text-group li:nth-child(n+4) {
+    opacity: 60%;
+    font-style: italic;
+    text-shadow: -2px 0.5px 10px rgb(238, 117, 137);
   }
   .mobile__text-group li:nth-child(1) {
-    rotate: calc(24deg);
+    rotate: calc(30deg);
   }
   .mobile__text-group li:nth-child(2) {
-    rotate: calc(48deg);
+    rotate: calc(60deg);
   }
   .mobile__text-group li:nth-child(3) {
-    rotate: calc(72deg);
+    rotate: calc(90deg);
   }
   .mobile__text-group li:nth-child(4) {
-    rotate: calc(96deg);
-  }
-  .mobile__text-group li:nth-child(5) {
     rotate: calc(120deg);
   }
+  .mobile__text-group li:nth-child(5) {
+    rotate: calc(150deg);
+  }
   .mobile__text-group li:nth-child(6) {
-    rotate: calc(144deg);
+    rotate: calc(180deg);
   }
   .mobile__text-group li:nth-child(7) {
-    rotate: calc(168deg);
+    rotate: calc(210deg);
   }
   .mobile__text-group li:nth-child(8) {
-    rotate: calc(192deg);
-  }
-  .mobile__text-group li:nth-child(9) {
-    rotate: calc(216deg);
-  }
-  .mobile__text-group li:nth-child(10) {
     rotate: calc(240deg);
   }
+  .mobile__text-group li:nth-child(9) {
+    rotate: calc(270deg);
+  }
+  .mobile__text-group li:nth-child(10) {
+    rotate: calc(300deg);
+  }
   .mobile__text-group li:nth-child(11) {
-    rotate: calc(264deg);
+    rotate: calc(330deg);
   }
   .mobile__text-group li:nth-child(12) {
-    rotate: calc(288deg);
-  }
-  .mobile__text-group li:nth-child(13) {
-    rotate: calc(312deg);
-  }
-  .mobile__text-group li:nth-child(14) {
-    rotate: calc(336deg);
-  }
-  .mobile__text-group li:nth-child(15) {
     rotate: calc(360deg);
   }
   .mobile__text-group li span {
