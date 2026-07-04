@@ -323,7 +323,7 @@ body {
   }
 }
 
-.Mobile-text-group {
+.mobile__text-group {
   display: none;
 }
 
@@ -455,6 +455,63 @@ body {
   .birthday-profile__text-group {
     display: none;
   }
+
+  .mobile__text-group {
+    display: block;
+    min-height: 35vh;
+    position: relative;
+    font-family: "Montserrat";
+    margin-bottom: 25%;
+  }
+
+  .mobile__text-group ul {
+    list-style: none;
+  }
+
+  .mobile__text-group li {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+
+    line-height: 0;
+    transform-origin: 0 0;
+    text-wrap: nowrap;
+
+    $items: 20;
+    $angle: 360 / $items;
+
+    &:last-child {
+      color: red;
+    }
+
+    @for $i from 1 through $items {
+      &:nth-child(#{$i}) {
+        rotate: calc(#{$angle * $i}deg);
+      }
+    }
+
+    span {
+      --rotate-velocity: calc(var(--rotate) - var(--delayed-rotate));
+      --rotate-spacing: calc(var(--spacing) * -4 * var(--rotate-velocity));
+      --x: calc(var(--circle-size) / 2 + var(--rotate-spacing));
+      --y: calc(10px * var(--rotate-velocity));
+      --r: calc(90deg * var(--rotate-velocity));
+
+      display: inline-block;
+      transform: translate(var(--x), var(--y)) rotate(var(--r, 0deg));
+
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          --y: calc((#{$i} * -20px) * var(--rotate-velocity));
+
+          transform-origin: var(--x) 0;
+          transition: --delayed-rotate
+            calc(var(--ease-speed, 100ms) * #{$i - 1})
+            ease-out;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1124px) {
@@ -495,5 +552,11 @@ body {
     letter-spacing: 0.1rem;
     top: 88%;
     left: 25%;
+  }
+
+  .birthday-profile__text-group li {
+    position: absolute;
+    top: 43%;
+    left: 70%;
   }
 }

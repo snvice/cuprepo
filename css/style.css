@@ -404,7 +404,7 @@ body {
   transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 9) ease-out;
 }
 
-.Mobile-text-group {
+.mobile__text-group {
   display: none;
 }
 
@@ -515,6 +515,146 @@ body {
   .birthday-profile__text-group {
     display: none;
   }
+  .mobile__text-group {
+    display: block;
+    min-height: 35vh;
+    position: relative;
+    font-family: "Montserrat";
+    margin-bottom: 25%;
+  }
+  .mobile__text-group ul {
+    list-style: none;
+  }
+  .mobile__text-group li {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    line-height: 0;
+    transform-origin: 0 0;
+    text-wrap: nowrap;
+  }
+  .mobile__text-group li:last-child {
+    color: red;
+  }
+  .mobile__text-group li:nth-child(1) {
+    rotate: calc(18deg);
+  }
+  .mobile__text-group li:nth-child(2) {
+    rotate: calc(36deg);
+  }
+  .mobile__text-group li:nth-child(3) {
+    rotate: calc(54deg);
+  }
+  .mobile__text-group li:nth-child(4) {
+    rotate: calc(72deg);
+  }
+  .mobile__text-group li:nth-child(5) {
+    rotate: calc(90deg);
+  }
+  .mobile__text-group li:nth-child(6) {
+    rotate: calc(108deg);
+  }
+  .mobile__text-group li:nth-child(7) {
+    rotate: calc(126deg);
+  }
+  .mobile__text-group li:nth-child(8) {
+    rotate: calc(144deg);
+  }
+  .mobile__text-group li:nth-child(9) {
+    rotate: calc(162deg);
+  }
+  .mobile__text-group li:nth-child(10) {
+    rotate: calc(180deg);
+  }
+  .mobile__text-group li:nth-child(11) {
+    rotate: calc(198deg);
+  }
+  .mobile__text-group li:nth-child(12) {
+    rotate: calc(216deg);
+  }
+  .mobile__text-group li:nth-child(13) {
+    rotate: calc(234deg);
+  }
+  .mobile__text-group li:nth-child(14) {
+    rotate: calc(252deg);
+  }
+  .mobile__text-group li:nth-child(15) {
+    rotate: calc(270deg);
+  }
+  .mobile__text-group li:nth-child(16) {
+    rotate: calc(288deg);
+  }
+  .mobile__text-group li:nth-child(17) {
+    rotate: calc(306deg);
+  }
+  .mobile__text-group li:nth-child(18) {
+    rotate: calc(324deg);
+  }
+  .mobile__text-group li:nth-child(19) {
+    rotate: calc(342deg);
+  }
+  .mobile__text-group li:nth-child(20) {
+    rotate: calc(360deg);
+  }
+  .mobile__text-group li span {
+    --rotate-velocity: calc(var(--rotate) - var(--delayed-rotate));
+    --rotate-spacing: calc(var(--spacing) * -4 * var(--rotate-velocity));
+    --x: calc(var(--circle-size) / 2 + var(--rotate-spacing));
+    --y: calc(10px * var(--rotate-velocity));
+    --r: calc(90deg * var(--rotate-velocity));
+    display: inline-block;
+    transform: translate(var(--x), var(--y)) rotate(var(--r, 0deg));
+  }
+  .mobile__text-group li span:nth-child(1) {
+    --y: calc((1 * -20px) * var(--rotate-velocity));
+    transform-origin: var(--x) 0;
+    transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 0) ease-out;
+  }
+  .mobile__text-group li span:nth-child(2) {
+    --y: calc((2 * -20px) * var(--rotate-velocity));
+    transform-origin: var(--x) 0;
+    transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 1) ease-out;
+  }
+  .mobile__text-group li span:nth-child(3) {
+    --y: calc((3 * -20px) * var(--rotate-velocity));
+    transform-origin: var(--x) 0;
+    transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 2) ease-out;
+  }
+  .mobile__text-group li span:nth-child(4) {
+    --y: calc((4 * -20px) * var(--rotate-velocity));
+    transform-origin: var(--x) 0;
+    transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 3) ease-out;
+  }
+  .mobile__text-group li span:nth-child(5) {
+    --y: calc((5 * -20px) * var(--rotate-velocity));
+    transform-origin: var(--x) 0;
+    transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 4) ease-out;
+  }
+  .mobile__text-group li span:nth-child(6) {
+    --y: calc((6 * -20px) * var(--rotate-velocity));
+    transform-origin: var(--x) 0;
+    transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 5) ease-out;
+  }
+  .mobile__text-group li span:nth-child(7) {
+    --y: calc((7 * -20px) * var(--rotate-velocity));
+    transform-origin: var(--x) 0;
+    transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 6) ease-out;
+  }
+  .mobile__text-group li span:nth-child(8) {
+    --y: calc((8 * -20px) * var(--rotate-velocity));
+    transform-origin: var(--x) 0;
+    transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 7) ease-out;
+  }
+  .mobile__text-group li span:nth-child(9) {
+    --y: calc((9 * -20px) * var(--rotate-velocity));
+    transform-origin: var(--x) 0;
+    transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 8) ease-out;
+  }
+  .mobile__text-group li span:nth-child(10) {
+    --y: calc((10 * -20px) * var(--rotate-velocity));
+    transform-origin: var(--x) 0;
+    transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 9) ease-out;
+  }
 }
 @media (min-width: 769px) and (max-width: 1124px) {
   .chapter-text {
@@ -547,5 +687,10 @@ body {
     letter-spacing: 0.1rem;
     top: 88%;
     left: 25%;
+  }
+  .birthday-profile__text-group li {
+    position: absolute;
+    top: 43%;
+    left: 70%;
   }
 }/*# sourceMappingURL=style.css.map */
