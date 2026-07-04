@@ -7,17 +7,14 @@
 }
 
 body {
-  /* background-color: #fbf9f4; */
-  /* background-color: #fff; */
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
 }
 
 .site-header {
-  margin: 2% 3% 0;
+  margin: 2% 3% 2%;
   padding-bottom: 2rem;
   border-bottom: 1px solid #a0a0a096;
   border-radius: 15px;
-  margin-bottom: 2%;
 }
 
 .site-header__meta {
@@ -27,7 +24,6 @@ body {
 
 .site-header__name {
   font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
   font-size: 3rem;
   font-weight: 700;
   font-style: italic;
@@ -38,7 +34,6 @@ body {
 
 .site-header__meta-item {
   font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
   font-size: 0.7rem;
   font-weight: 400;
   letter-spacing: 0.321rem;
@@ -55,14 +50,12 @@ body {
 
 .chapter-text {
   padding: 0 5%;
-  font-optical-sizing: auto;
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.3rem;
   text-transform: uppercase;
   text-shadow: 0px 0px 5px;
   margin-bottom: 1%;
-  /* border: 1px solid #0dee0596; */
 }
 
 .birthday-hero-grid {
@@ -73,12 +66,10 @@ body {
 .birthday-hero-grid > * {
   flex: 1;
   margin-bottom: 5%;
-  /* border: 1px solid #0dee0596; */
 }
 
 .birthday-hero__title {
   font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
   font-size: 4.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
@@ -97,7 +88,6 @@ body {
 
 .age-stats__value {
   font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
   font-size: 3rem;
   font-weight: 500;
   letter-spacing: 0.1rem;
@@ -106,7 +96,6 @@ body {
 
 .age-stats__label {
   font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
   font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.4rem;
@@ -120,15 +109,7 @@ body {
 
 .birthday-profile {
   display: flex;
-  /* flex-direction: column; */
   margin: 0 9%;
-  /* padding: 2%; */
-  /* background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png"); */
-  /* border: 1px solid #a0a0a08e; */
-  /* transform: rotate(2deg); */
-  /* box-shadow: 0px 0px 17px -4px #00000059; */
-  /* margin-bottom: 3rem; */
-  /* border: 1px solid #a0a0a08e; */
 }
 
 .birthday-profile > * {
@@ -155,18 +136,12 @@ body {
 .birthday-profile__date {
   margin: 0 auto;
   text-align: center;
-  /* padding: 2% 5%; */
   width: max-content;
-  /* background: #fff; */
-  /* border-radius: 15px; */
   font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
   font-size: 1rem;
-  /* font-style: italic; */
   font-weight: 500;
   letter-spacing: 0.1rem;
   transform: rotate(3deg);
-  /* text-shadow: 0px 0px 1px; */
   position: absolute;
   top: 89%;
   left: 35%;
@@ -177,29 +152,16 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* border: 1px solid #0dee0596; */
 }
 
 .birthday-profile__quote {
   font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
   font-style: italic;
   font-size: 2rem;
   font-weight: 300;
   letter-spacing: 0.1rem;
   text-shadow: 1px 1px 1px;
   color: #8e443d;
-  /* color: #000; */
-}
-
-.lottie-under-constrn {
-  margin: 3% auto;
-  width: 350px;
-  height: auto;
-}
-
-.footer {
-  margin-top: 3rem;
 }
 
 @media (max-width: 768px) {
@@ -324,18 +286,12 @@ body {
     font-family: "Font Awesome 7 Free";
     font-size: 0.8rem;
     font-weight: 800;
-    color: #0000007a;
     color: #8e443d;
     display: block;
     text-align: center;
     margin-bottom: 7%;
   }
 
-  .lottie-under-constrn {
-    margin: 5% auto 0;
-    width: auto;
-    height: auto;
-  }
 }
 
 @media (min-width: 769px) and (max-width: 1124px) {
@@ -351,7 +307,7 @@ body {
 
   .birthday-hero__title {
     font-size: 3.5rem;
-    margin-bottom: 0rem;
+    margin-bottom: 0;
   }
 
   .age-stats__value {
