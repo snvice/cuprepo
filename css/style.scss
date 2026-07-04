@@ -14,6 +14,15 @@ $main: #e949a1;
 $dark: #333333;
 $ease-slow: all 0.4s ease-out;
 
+:root {
+  --circle-size: 30vmin;
+  --spacing: 3vmin;
+  --font-size: 5vmin;
+  --ease-speed: 50ms;
+  --rotate: 0;
+  --delayed-rotate: 0;
+}
+
 body {
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
 }
@@ -223,7 +232,7 @@ body {
 
 .birthday-profile {
   display: flex;
-  margin: 0 9%;
+  margin: 0 auto;
 }
 
 .birthday-profile > * {
@@ -262,20 +271,60 @@ body {
 }
 
 .birthday-profile__text-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  font-family: "Montserrat";
 }
 
-.birthday-profile__quote {
-  font-family: "Playfair Display", serif;
-  font-style: italic;
-  font-size: 2rem;
-  font-weight: 300;
-  letter-spacing: 0.1rem;
-  text-shadow: 1px 1px 1px;
-  color: #8e443d;
+.birthday-profile__text-group ul {
+  list-style: none;
+}
+
+.birthday-profile__text-group li {
+  position: absolute;
+  top: 70%;
+  left: 70%;
+
+  line-height: 0;
+  transform-origin: 0 0;
+  text-wrap: nowrap;
+
+  $items: 20;
+  $angle: 360 / $items;
+
+  &:last-child {
+    color: red;
+  }
+
+  @for $i from 1 through $items {
+    &:nth-child(#{$i}) {
+      rotate: calc(#{$angle * $i}deg);
+    }
+  }
+
+  span {
+    --rotate-velocity: calc(var(--rotate) - var(--delayed-rotate));
+    --rotate-spacing: calc(var(--spacing) * -4 * var(--rotate-velocity));
+    --x: calc(var(--circle-size) / 2 + var(--rotate-spacing));
+    --y: calc(10px * var(--rotate-velocity));
+    --r: calc(90deg * var(--rotate-velocity));
+
+    display: inline-block;
+    transform: translate(var(--x), var(--y)) rotate(var(--r, 0deg));
+
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}) {
+        --y: calc((#{$i} * -20px) * var(--rotate-velocity));
+
+        transform-origin: var(--x) 0;
+        transition: --delayed-rotate
+          calc(var(--ease-speed, 100ms) * #{$i - 1})
+          ease-out;
+      }
+    }
+  }
+}
+
+.Mobile-text-group {
+  display: none;
 }
 
 @media (max-width: 768px) {
@@ -404,24 +453,7 @@ body {
   }
 
   .birthday-profile__text-group {
-    text-align: center;
-    margin: 10% 2% 0;
-  }
-
-  .birthday-profile__quote {
-    font-size: 1.5rem;
-    font-weight: 200;
-  }
-
-  .birthday-profile__quote::before {
-    content: "\f004   \f004   \f004";
-    font-family: "Font Awesome 7 Free";
-    font-size: 0.8rem;
-    font-weight: 800;
-    color: #8e443d;
-    display: block;
-    text-align: center;
-    margin-bottom: 7%;
+    display: none;
   }
 }
 
