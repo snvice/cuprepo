@@ -174,6 +174,7 @@ body {
 
 .birthday-profile__text-group {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   /* border: 1px solid #0dee0596; */
@@ -183,12 +184,18 @@ body {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-style: italic;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 300;
   letter-spacing: 0.1rem;
-  margin-bottom: 0.5rem;
   text-shadow: 1px 1px 1px;
   color: #8e443d;
+  /* color: #000; */
+}
+
+.lottie-under-constrn {
+  margin: 3% auto;
+  width: 350px;
+  height: auto;
 }
 
 .footer {
@@ -222,7 +229,7 @@ body {
   .birthday-hero-grid {
     padding: 0 5%;
     flex-direction: column;
-    /* border: 1px solid #0dee0596; */
+    margin-bottom: 3%;
   }
 
   .birthday-hero {
@@ -290,6 +297,7 @@ body {
   .birthday-profile__avatar {
     padding: 0;
     max-width: 100%;
+    outline: none;
   }
 
   .birthday-profile__date {
@@ -297,9 +305,36 @@ body {
     text-align: center;
     font-size: 0.9rem;
     position: relative;
-
     top: 0;
     left: 0;
+  }
+
+  .birthday-profile__text-group {
+    text-align: center;
+    margin: 10% 2% 0;
+  }
+
+  .birthday-profile__quote {
+    font-size: 1.5rem;
+    font-weight: 200;
+  }
+
+  .birthday-profile__quote::before {
+    content: "\f004   \f004   \f004";
+    font-family: "Font Awesome 7 Free";
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: #0000007a;
+    color: #8e443d;
+    display: block;
+    text-align: center;
+    margin-bottom: 7%;
+  }
+
+  .lottie-under-constrn {
+    margin: 5% auto 0;
+    width: auto;
+    height: auto;
   }
 }
 
