@@ -428,7 +428,7 @@ body {
     letter-spacing: 0.21rem;
   }
   .sidebar--container {
-    top: 10%;
+    top: 50%;
     width: 80px;
   }
   .sidebar--container--icon {
