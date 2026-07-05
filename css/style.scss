@@ -293,7 +293,7 @@ body {
   $items: 20;
   $angle: 360 / $items;
 
-  &:nth-child(n + 4) {
+  &:nth-child(n + 5) {
     opacity: 60%;
     font-style: italic;
     text-shadow: -2px 0.5px 10px rgb(238, 117, 137);
@@ -505,7 +505,7 @@ body {
     $items: 12;
     $angle: 360 / $items;
 
-    &:nth-child(n + 4) {
+    &:nth-child(n + 5) {
       opacity: 60%;
       font-style: italic;
       text-shadow: -2px 0.5px 10px rgb(238, 117, 137);
@@ -585,5 +585,77 @@ body {
     position: absolute;
     top: 43%;
     left: 70%;
+  }
+}
+
+.tiny {
+  position: relative;
+  background: #f7b9ca;
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+$bw: 3em; // Button width
+$bh: 1.5em; // Button height
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #22cc99; //844a2f
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(
+    calc(50% - #{$bw}) calc(50% - #{$bh}),
+    calc(50% + #{$bw}) calc(50% - #{$bh}),
+    calc(50% + #{$bw}) calc(50% + #{$bh}),
+    calc(50% - #{$bw}) calc(50% + #{$bh})
+  ); // center invisible
+  transition: clip-path 0.4s cubic-bezier(0, 0.58, 0.36, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__content {
+  opacity: 0;
+  transform: translate3D(0, -1em, 0);
+  transition:
+    opacity 0.1s 0s,
+    transform 0.3s 0s; //close
+  padding: 2em;
+  max-width: 30em;
+  color: #fff;
+}
+
+.modal-button {
+  margin-right: auto;
+  align-self: flex-start;
+  background: transparent;
+  border: none;
+  padding: 1em;
+  color: #fff;
+  z-index: 1;
+  transition: opacity 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  &:active {
+    outline: none;
+    opacity: 0;
+  }
+  &:active ~ .modal {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%); // full rectangle
+  }
+  &:active ~ .modal .modal__content {
+    opacity: 1;
+    transform: translate3D(0, 1em, 0);
+    transition:
+      opacity 0.3s 0.2s,
+      transform 0.6s 0.2s cubic-bezier(0, 0.65, 0.06, 0.98); //open
   }
 }
