@@ -284,7 +284,7 @@ body {
   transform-origin: 0 0;
   text-wrap: nowrap;
 }
-.birthday-profile__text-group li:nth-child(n+5) {
+.birthday-profile__text-group li:nth-child(n+6) {
   opacity: 60%;
   font-style: italic;
   text-shadow: -2px 0.5px 10px rgb(238, 117, 137);
@@ -551,7 +551,7 @@ body {
     transform-origin: 0 0;
     text-wrap: nowrap;
   }
-  .mobile__text-group li:nth-child(n+5) {
+  .mobile__text-group li:nth-child(n+6) {
     opacity: 60%;
     font-style: italic;
     text-shadow: -2px 0.5px 10px rgb(238, 117, 137);
@@ -821,4 +821,10 @@ body {
 
 .button-17:disabled {
   box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0, rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+}
+
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

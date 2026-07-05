@@ -293,7 +293,7 @@ body {
   $items: 20;
   $angle: 360 / $items;
 
-  &:nth-child(n + 5) {
+  &:nth-child(n + 6) {
     opacity: 60%;
     font-style: italic;
     text-shadow: -2px 0.5px 10px rgb(238, 117, 137);
@@ -505,7 +505,7 @@ body {
     $items: 12;
     $angle: 360 / $items;
 
-    &:nth-child(n + 5) {
+    &:nth-child(n + 6) {
       opacity: 60%;
       font-style: italic;
       text-shadow: -2px 0.5px 10px rgb(238, 117, 137);
@@ -752,4 +752,10 @@ $bh: 1.5em; // Button height
   box-shadow:
     rgba(60, 64, 67, 0.3) 0 1px 3px 0,
     rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+}
+
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none;
+  }
 }
